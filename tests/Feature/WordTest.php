@@ -3,7 +3,7 @@
 use App\Models\Word;
 
 test('creates a Word with default values', function () {
-    // Creates a new game session for the user
+    // Creates a new word
     $word = Word::create([
         'text' => 'example',
         'difficulty' => 'easy',
