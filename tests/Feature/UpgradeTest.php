@@ -3,7 +3,7 @@
 use App\Models\Upgrade;
 
 test('creates a Upgrade with default values', function () {
-    // Creates a new game session for the user
+    // Creates a new upgrade
     $upgrade = Upgrade::create([
         'name' => 'example',
         'description' => 'this is a example of upgrade',
