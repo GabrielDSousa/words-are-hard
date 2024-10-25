@@ -9,11 +9,22 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				// "mikestead.dotenv",
-				// "amiralizadeh9480.laravel-extra-intellisense",
-				// "ryannaddy.laravel-artisan",
-				// "onecentlin.laravel5-snippets",
-				// "onecentlin.laravel-blade"
+				"mikestead.dotenv",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"ryannaddy.laravel-artisan",
+				"onecentlin.laravel5-snippets",
+				"onecentlin.laravel-blade",
+				"Vue.volar",
+				"EditorConfig.EditorConfig",
+				"nhedger.inertia",
+				"codingyu.laravel-goto-view",
+				"open-southeners.laravel-pint",
+				"naoray.laravel-goto-components",
+				"pgl.laravel-jump-controller",
+				"xdebug.php-debug",
+				"bmewburn.vscode-intelephense-client",
+				"MehediDracula.php-namespace-resolver",
+				"bradlc.vscode-tailwindcss"
 			],
 			"settings": {}
 		}
