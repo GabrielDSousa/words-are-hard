@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class GameSession extends Model
 {
+    /** @use HasFactory<\Database\Factories\GameSession> */
     use HasFactory;
 
     protected $fillable = [
