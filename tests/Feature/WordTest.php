@@ -1,12 +1,8 @@
 <?php
 
-use App\Models\User;
 use App\Models\Word;
 
 test('creates a Word with default values', function () {
-    // Assumes a user exists or creates one to link to the Word
-    $user = User::factory()->create();
-
     // Creates a new game session for the user
     $word = Word::create([
         'text' => 'example',
