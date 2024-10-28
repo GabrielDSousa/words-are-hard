@@ -13,6 +13,8 @@ class Word extends Model
     protected $fillable = [
         'text',
         'difficulty',
-        'points'
+        'points',
+        'partOfSpeech',
+        'definition'
     ];
 }
