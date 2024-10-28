@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('text');
             $table->enum('difficulty', ['easy', 'medium', 'hard']);
             $table->integer('points')->nullable();
+            $table->string('partOfSpeech');
+            $table->string('definition');
             $table->timestamps();
         });
     }
