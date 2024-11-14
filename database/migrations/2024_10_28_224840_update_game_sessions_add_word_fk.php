@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Word;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,12 +12,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('words', function (Blueprint $table) {
-            $table->id();
-            $table->string('text');
-            $table->string('frequency');
-            $table->json('info')->nullable();
-            $table->timestamps();
+        Schema::table('game_sessions', function (Blueprint $table) {
+            $table->foreignIdFor(Word::class)->constrained();
         });
     }
 
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('words');
+        Schema::dropColumns('game_sessions', 'word_id');
     }
 };

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -18,7 +19,8 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [GameController::class, 'index'])->name('dashboard');
+    Route::post('/game', [GameController::class, 'store'])->name('start.game');
+    Route::get('/game/{id}', [GameController::class, 'show'])->name('current.game');
+    Route::put('/game/{id}', [GameController::class, 'update'])->name('update.game');
 });

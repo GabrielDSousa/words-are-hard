@@ -18,8 +18,7 @@ class WordFactory extends Factory
     {
         return [
             'text' => $this->faker->word(),
-            'difficulty' => $this->faker->randomElement(['easy', 'medium', 'hard']),
-            'points' => $this->faker->numberBetween(10, 10000)
+            'frequency' => $this->faker->numberBetween(ceil(1.74), floor(8.03))
         ];
     }
 }
