@@ -14,10 +14,8 @@ return new class extends Migration
         Schema::create('words', function (Blueprint $table) {
             $table->id();
             $table->string('text');
-            $table->enum('difficulty', ['easy', 'medium', 'hard']);
-            $table->integer('points')->nullable();
-            $table->string('partOfSpeech');
-            $table->string('definition');
+            $table->string('frequency');
+            $table->json('info')->nullable();
             $table->timestamps();
         });
     }
